@@ -40,16 +40,12 @@ const play = document.querySelector('#play');
 const modal = document.querySelector('#modal');
 let mask = document.createElement("div");
 
-// mask.outerHTML = `<div class="banner"></div>`;
 const body = document.body;
-
-// $('body').append(`<div class="banner"></div>`);
 
 play.addEventListener('click', function(){
   modal.style.display = "flex";
   mask.classList.add("mask");
   body.appendChild(mask);
-  console.log(mask)
 })
 
 close.addEventListener('click', function(){
