@@ -99,7 +99,8 @@ input, select {
 
 #modal {
   max-width: 630px;
-  max-height: 744px;
+  height: 744px;
+  max-height: 100%;
   background: #FFFFFF;
   box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
@@ -191,7 +192,7 @@ input, select {
     box-shadow: 0px 4px 0px 10px #63c7ff;
     background-color: #63C7FF;
     border-radius: 50%;
-    z-index: 3; }
+    z-index: 4; }
   .banner::before {
     content: "";
     font-family: "FontAwesome";
@@ -205,19 +206,24 @@ input, select {
     box-shadow: 0px 4px 0px 10px #63c7ff;
     background-color: #63C7FF;
     border-radius: 50%;
-    z-index: 3; }
+    z-index: 4; }
+  .banner .banner__container {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
   .banner form {
-    position: absolute;
-    bottom: 20%;
-    left: 6.2%;
-    z-index: 2; }
+    margin-top: 118px;
+    transform: translateX(4%); }
     .banner form label {
       display: block;
       font-size: 18px;
       line-height: 26px;
       opacity: 0.7;
       color: #fff;
-      margin-bottom: 18px; }
+      margin-bottom: 18px;
+      width: max-content; }
     .banner form button {
       padding: 11px 37px;
       background: #38A5DB;
@@ -496,9 +502,6 @@ footer {
       margin-left: 24px; } }
 
 @media (max-width: 1127px) {
-  .banner form {
-    bottom: 30%;
-    left: unset; }
   .banner .banner img {
     margin-top: 0; }
   .banner__wrapper > .fa-play {
@@ -510,10 +513,7 @@ footer {
     width: unset;
     height: unset; }
   .banner form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    bottom: 25%; }
+    width: 80%; }
     .banner form label {
       font-size: 14px; }
     .banner form input, .banner form button {
@@ -524,7 +524,11 @@ footer {
   .banner img:not(.arrow) {
     margin-top: 50%; }
   .banner h1 {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem;
+    margin-top: 25%;
+    padding: 5%; }
+  .banner .arrow__banner {
+    display: none; } }
 
 @media all and (min-width: 1201px) {
   .splide__arrows {
